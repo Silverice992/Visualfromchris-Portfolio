@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SONY 24-70 F2.8 GM II – Chris Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="page">
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <div class="brand-mark"></div>
+          <div class="brand-text">
+            <span class="brand-name">CHRIS</span>
+            <span class="brand-role">Visual Storyteller</span>
+          </div>
+        </a>
+
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="work.html" class="active">Work</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="nav-social">
+            <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            <span>•</span>
+            <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+          </div>
+        </div>
+
+        <button class="nav-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+      </nav>
+    </div>
+
+    <!-- MENU OVERLAY MOBILE -->
+    <div id="nav-mobile" class="nav-mobile">
+      <button class="nav-close" aria-label="Close menu" onclick="toggleMenu()">✕</button>
+
+      <div class="nav-mobile-main">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="work.html" onclick="toggleMenu()">Work</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
+      </div>
+
+      <div class="nav-mobile-footer">
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:hello@chrisvisuals.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="work-main">
+    <!-- ENCARt VIDÉO -->
+    <section class="project-hero">
+      <div class="project-video-frame">
+        <!-- CHANGE ICI : ta vidéo principale -->
+        <video
+          src="assets/project-1-main.mp4"
+          controls
+          playsinline
+        ></video>
+      </div>
+    </section>
+
+    <!-- TEXTE DU PROJET -->
+    <section class="section project-text-section">
+      <div class="container">
+        <div class="project-text">
+          <h1>SONY 24-70 F2.8 GM II</h1>
+          <p>
+            Ici tu racontes le projet : contexte, marque, lieu, objectif du film,
+            mood recherché, rôle exact (réalisation, montage, drone…).
+          </p>
+          <p>
+            Tu peux ajouter plusieurs paragraphes, détails techniques, storytelling, etc.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIE 8 EMPLACEMENTS -->
+    <section class="section project-gallery-section">
+      <div class="container">
+        <div class="project-gallery">
+
+          <!-- Slot 1 -->
+          <div class="project-media">
+            <img src="assets/project-1-img1.jpg" alt="Project still 1" />
+          </div>
+
+          <!-- Slot 2 -->
+          <div class="project-media">
+            <img src="assets/project-1-img2.jpg" alt="Project still 2" />
+          </div>
+
+          <!-- Slot 3 -->
+          <div class="project-media">
+            <img src="assets/project-1-img3.jpg" alt="Project still 3" />
+          </div>
+
+          <!-- Slot 4 -->
+          <div class="project-media">
+            <img src="assets/project-1-img4.jpg" alt="Project still 4" />
+          </div>
+
+          <!-- Slot 5 -->
+          <div class="project-media">
+            <!-- Tu peux mettre une vidéo à la place d'une image -->
+            <video src="assets/project-1-clip1.mp4" controls playsinline></video>
+          </div>
+
+          <!-- Slot 6 -->
+          <div class="project-media">
+            <img src="assets/project-1-img5.jpg" alt="Project still 5" />
+          </div>
+
+          <!-- Slot 7 -->
+          <div class="project-media">
+            <img src="assets/project-1-img6.jpg" alt="Project still 6" />
+          </div>
+
+          <!-- Slot 8 -->
+          <div class="project-media">
+            <img src="assets/project-1-img7.jpg" alt="Project still 7" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <span>© <span id="year"></span> Chris — Storytelling Visuals</span>
+      <span>Instagram · YouTube</span>
+    </div>
+  </footer>
+
+  <script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById("nav-mobile");
+      const toggleBtn = document.querySelector(".nav-toggle");
+      const isOpen = nav.classList.contains("open");
+
+      if (isOpen) {
+        nav.classList.remove("open");
+        if (toggleBtn) toggleBtn.textContent = "☰";
+        document.body.style.overflow = "";
+      } else {
+        nav.classList.add("open");
+        if (toggleBtn) toggleBtn.textContent = "✕";
+        document.body.style.overflow = "hidden";
+      }
+    }
+  </script>
+</body>
+</html>

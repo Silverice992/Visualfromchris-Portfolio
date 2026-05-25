@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Terms & Conditions – Visuals From Chris</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="page terms-page">
+
+    <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="brand">
+          <div class="brand-mark"></div>
+          <div class="brand-text">
+            <span class="brand-name"></span>
+            <span class="brand-role"></span>
+          </div>
+        </a>
+
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="work.html">Work</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="nav-social">
+  <a href="https://instagram.com/visualsfromchris" target="_blank" aria-label="Instagram">
+    <svg viewBox="0 0 24 24"><path d="M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm10 2c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3h10zm-5 3.5A4.5 4.5 0 1 0 12 16a4.5 4.5 0 0 0 0-9zm0 2A2.5 2.5 0 1 1 9.5 12 2.5 2.5 0 0 1 12 9.5zM17.5 6.2a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2z"/></svg>
+  </a>
+
+  <a href="https://youtube.com/@visualsfromchris" target="_blank" aria-label="YouTube">
+    <svg viewBox="0 0 24 24"><path d="M23 7s-.2-1.7-.8-2.4c-.8-.8-1.7-.8-2.1-.9C16.8 3.5 12 3.5 12 3.5h0s-4.8 0-8.1.2c-.4.1-1.3.1-2.1.9C1.2 5.3 1 7 1 7S.8 9 .8 11v2c0 2 .2 4 .2 4s.2 1.7.8 2.4c.8.8 1.9.8 2.4.9 1.7.2 7.1.2 7.1.2s4.8 0 8.1-.2c.4-.1 1.3-.1 2.1-.9.6-.7.8-2.4.8-2.4s.2-2 .2-4v-2c0-2-.2-4-.2-4zM9.8 14.6V8.9l5.4 2.9-5.4 2.8z"/></svg>
+  </a>
+
+  <a href="mailto:chris.rec709@gmail.com" aria-label="Email">
+    <svg viewBox="0 0 24 24"><path d="M2 4h20v16H2V4zm10 7L4 6v12h16V6l-8 5z"/></svg>
+  </a>
+</div>
+</div>
+
+       <button class="nav-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+      </nav>
+    </div>
+
+    <!-- MENU OVERLAY MOBILE -->
+    <div id="nav-mobile" class="nav-mobile">
+      <button class="nav-close" aria-label="Close menu" onclick="toggleMenu()">✕</button>
+
+      <div class="nav-mobile-main">
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="work.html" onclick="toggleMenu()">Work</a>
+        <a href="contact.html" onclick="toggleMenu()">Contact</a>
+      </div>
+
+      <div class="nav-mobile-footer">
+        <a href="https://instagram.com/visualsfromchris" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://youtube.com/@visualsfromchris" target="_blank" rel="noopener">YouTube</a>
+        <a href="mailto:chris.rec709@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO / INTRO (même logique que les autres pages) -->
+    <section class="terms-hero">
+      <div class="terms-hero-inner">
+        <h1 class="terms-title">TERMS & CONDITIONS</h1>
+      </div>
+    </section>
+
+    <!-- CONTENT -->
+    <section class="terms-content">
+      <div class="terms-inner">
+
+        <h2>GENERAL TERMS AND CONDITIONS</h2>
+        <p class="muted">
+          INTELLECTUAL PROPERTY RIGHTS
+        </p>
+All content available on this website, including but not limited to videos, photographs, images, information, text, graphics, logos, trademarks, and data, is protected by intellectual property laws and remain the exclusive property of the website owner or its licensors.
+
+        </p>
+          Any use, reproduction, representation, modification, translation, distribution, publication, transmission, or exploitation of all or part of the content, for commercial or non-commercial purposes, by any means and in any format whatsoever, is strictly prohibited without the prior written consent of the website owner.
+
+
+        </p>
+Any unauthorized use of the content may result in civil and/or criminal liability under applicable laws.
+
+	</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (identique aux autres pages) -->
+  <footer class="site-footer-min">
+  <span>© <span id="year"></span> Chris — Storytelling Visuals</span>
+</footer>
+
+<script>
+    const yearEl = document.getElementById("year");
+    if (yearEl) {
+      yearEl.textContent = new Date().getFullYear();
+    }
+
+    function toggleMenu() {
+      const nav = document.getElementById("nav-mobile");
+      const toggleBtn = document.querySelector(".nav-toggle");
+      const isOpen = nav.classList.contains("open");
+
+      if (isOpen) {
+        nav.classList.remove("open");
+        if (toggleBtn) toggleBtn.textContent = "☰";
+        document.body.style.overflow = "";
+      } else {
+        nav.classList.add("open");
+        if (toggleBtn) toggleBtn.textContent = "✕";
+        document.body.style.overflow = "hidden";
+      }
+    }
+  </script>
+
+</body>
+</html>
