@@ -328,17 +328,38 @@ main {
 .hero-full {
   position: relative;
   width: 100%;
-  height: 100vh;       /* la vidéo remplit la fenêtre */
+  height: 100vh;
+  height: 100svh; /* meilleur sur mobile */
   overflow: hidden;
   background: #000;
 }
 
-.hero-full video {
+.hero-full video,
+.hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
   display: block;
   background-color: #000;
+}
+
+/* ---------- HERO MOBILE FIX ---------- */
+@media (max-width: 768px) {
+  .hero-full {
+    height: 100svh;
+    min-height: 100svh;
+  }
+
+  .hero-full video,
+  .hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+  }
 }
 
 /* ---------- Clients ---------- */
