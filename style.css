@@ -1076,6 +1076,7 @@ main {
   color: #fff;          /* ou var(--text) si tu as une variable */
   text-decoration: none;
 }
+ } 
 
 /* =========================
    TERMS PAGE (Roy editorial)
