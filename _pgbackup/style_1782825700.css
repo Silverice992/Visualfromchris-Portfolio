@@ -689,7 +689,7 @@ main {
 }
 
 .project-text p {
-    max-width: 1080;
+    max-width: 720px;
     font-size: 0.98rem;
     color: var(--muted);
     text-align: center;

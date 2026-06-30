@@ -46,7 +46,7 @@ body {
 }
 
 .container {
-    /* width: 100% */
+    width: 100%;
     max-width: 1120px;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -689,7 +689,7 @@ main {
 }
 
 .project-text p {
-    max-width: 1080;
+    max-width: 1080px;
     font-size: 0.98rem;
     color: var(--muted);
     text-align: center;
