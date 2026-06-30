@@ -668,7 +668,7 @@ main {
 }
 
 .project-video-frame video {
-    width: 100%;
+    width: 105%;
     height: auto;
     display: block;
     border-radius: 12px;
@@ -689,7 +689,7 @@ main {
 }
 
 .project-text p {
-    max-width: 1080px;
+    max-width: 720px;
     font-size: 0.98rem;
     color: var(--muted);
     text-align: center;
